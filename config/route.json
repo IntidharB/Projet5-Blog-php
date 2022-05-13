@@ -1,0 +1,155 @@
+[{
+	"url":"/Accueil",
+	"controller":"Accueil",
+	"action":"Accueil"
+	
+	}
+,
+
+
+
+
+
+
+
+{
+	"url":"/List",
+	"controller":"Article",
+	"action":"ListArticles"
+	}
+,
+
+{
+	"url":"/Article/([0-9]+)",
+	"controller":"Article",
+	"action":"Article",
+	"param":["idArticle"]
+	}
+,
+{
+	"url":"/Add",
+	"controller":"Article",
+	"action":"Add"
+	}
+,
+{
+	"url":"/AddArticle",
+	"controller":"Article",
+	"action":"AddArticle"
+	}
+,
+{
+	"url":"/Article/Edit",
+	"controller":"Article",
+	"action":"Edit"
+	}
+,
+
+{
+	"url":"/Article/EditArticle/([0-9]+)",
+	"controller":"Article",
+	"action":"EditArticle",
+	"param":["idArticle"]
+	}
+,
+{
+	"url":"/Article/Delete",
+	"controller":"Article",
+	"action":"Delete"
+	}
+,
+
+
+{
+	"url":"/Article/DeleteArticle/([0-9]+)",
+	"controller":"Article",
+	"action":"DeleteArticle",
+	"param":["idArticle"]
+	}
+,
+
+
+
+
+
+
+
+	{
+	"url":"/ListCommentaires",
+	"controller":"Commentaire",
+	"action":"ListCommentaires"
+	}
+,
+
+
+{
+	"url":"/Article/AddCommentaire",
+	"controller":"Commentaire",
+	"action":"AddComment"
+		}
+,
+{
+	"url":"/Article/DeleteCommentaire",
+	"controller":"Commentaire",
+	"action":"DeleteComment"
+		}
+,	
+	
+
+
+
+
+
+
+
+{
+	"url":"/EnvoyerMsg",
+	"controller":"Contact",
+	"action":"Envoyer"
+	}
+
+
+
+
+
+,
+
+{
+	"url":"/Connexion",
+	"controller":"User",
+	"action":"Connexion"
+	}
+,
+
+{
+	"url":"/Connect",
+	"controller":"User",
+	"action":"Connect"
+	}
+,
+
+{
+	"url":"/Inscription",
+	"controller":"User",
+	"action":"Inscription"
+	}
+,
+
+{
+	"url":"/Inscrit",
+	"controller":"User",
+	"action":"Inscrit"
+	}
+,
+
+{
+	"url":"/Deconnexion",
+	"controller":"User",
+	"action":"Deconnexion"
+	}
+
+
+
+
+	
+]

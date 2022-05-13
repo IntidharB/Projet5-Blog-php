@@ -1,0 +1,4 @@
+
+RewriteEngine On
+FallbackResource /projet5-blog-php/index.php
+
