@@ -44,18 +44,16 @@ class ControllerArticle extends ControllerBase
 				$this->AddParam('articles', $article);
 				$this->redirect("AddArticle");
 			}
-		} else {
-			$this->redirect("Accueil");
-		}
+		}else{$this->redirect("Accueil");}
+			
+		
 	}
 
 	public function AddArticle()
 	{
 		if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
 			$this->view('viewAdd');
-		} else {
-			$this->redirect("Accueil");
-		}
+		}else {$this->redirect("Accueil");}
 	}
 
 
@@ -82,10 +80,7 @@ class ControllerArticle extends ControllerBase
 		$this->AddParam('article', $article);
 		if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
 			$this->view('viewEdit');
-		} else {
-			$this->redirect("List");
-		}
-		//Article/EditArticle/13
+		}else {$this->redirect("List");}//Article/EditArticle/13
 	}
 
 
@@ -109,9 +104,6 @@ class ControllerArticle extends ControllerBase
 		$this->AddParam('article', $article);
 		if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
 			$this->view('viewDelete');
-		} else {
-			$this->redirect("List");
-		}
-		// $this->view('viewDelete');
+		} else {$this->redirect("List");}// $this->view('viewDelete');
 	}
 }

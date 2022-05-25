@@ -2,7 +2,7 @@
 require_once('controllers/ControllerBase.php');
 class Router
 {
-	private $ctrl;  //pour determiner quel est le ctrl qu'n veut avoir 
+	// private $ctrl;  //pour determiner quel est le ctrl qu'n veut avoir 
 
 	public function __construct()
 	{

@@ -2,9 +2,9 @@
 class ControllerContact extends ControllerBase
 {
 
-	private $articleManager;
-	private $view;
-
+	// private $articleManager;
+	// private $view;
+ 
 
 
 	public function Envoyer()

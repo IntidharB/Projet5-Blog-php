@@ -20,8 +20,8 @@ class ControllerUser extends ControllerBase {
 			// Si la requete renvoie un 0 alors l'utilisateur n'existe pas 
 			if($row == 0)
 			{
-				if(strlen($_POST['nom']) <= 100)
-				{
+				// if(strlen($_POST['nom']) <= 100)
+				// {
 					 // On verifie que la longueur du nom <= 100
 						if(strlen($_POST['prenom'])<= 100)
 						{	
@@ -42,7 +42,7 @@ class ControllerUser extends ControllerBase {
 	}else{ $this->AddParam("error","veuillez saisir un email valide");}
 }else{  $this->AddParam("error","Votre adresse_mail dépasse le nombre de caractères autorisés");}
 }else{  $this->AddParam("error","votre prénom dépasse le nombre de caractères autorisésr");}
-}else{  $this->AddParam("error","votre nom dépasse le nombre de caractères autorisés");}
+// }else{  $this->AddParam("error","votre nom dépasse le nombre de caractères autorisés");}
 }else{ $this->AddParam("error","Adresse mail déjà utilisée par un autre utilisateur");}
 $this->view('viewInscription');
 

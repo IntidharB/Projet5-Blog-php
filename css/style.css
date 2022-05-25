@@ -1,6 +1,6 @@
 /******* Generale************/
 
-*{
+* {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
 }
 p,a,label{
@@ -39,7 +39,7 @@ footer a{
 }
 /* img de la section  */
 .img2{
-	height: 400px !important;
+	height: 500px;
 	width: 300px;
 }
 
