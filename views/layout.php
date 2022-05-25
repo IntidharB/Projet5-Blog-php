@@ -22,13 +22,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<?= addslashes($baseurl); ?>Accueil">Accueil</a>
+              <a class="nav-link active" aria-current="page" href="<?= $baseurl; ?>Accueil">Accueil</a>
             </li>
             <?php
             if (!empty($_SESSION['user'])) {
             ?>
               <li class="nav-item">
-                <a class="nav-link" href="<?= addslashes($baseurl); ?>List">Articles</a>
+                <a class="nav-link" href="<?= $baseurl; ?>List">Articles</a>
               </li>
 
             <?php
@@ -41,13 +41,13 @@
       <?php
       if (!empty($_SESSION['user'])) {
       ?>
-        <a href="<?= addslashes($baseurl); ?>Deconnexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se déconneceter</a>
+        <a href="<?= $baseurl; ?>Deconnexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se déconneceter</a>
       <?php
       } else {
       ?>
 
-        <a href="<?= addslashes($baseurl); ?>Connexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se conneceter</a>
-        <a href="<?= addslashes($baseurl); ?>Inscription" class="btn btn-sm btn-outline-secondary me-3 w-25" type="button">S'inscrire</a>
+        <a href="<?= $baseurl; ?>Connexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se conneceter</a>
+        <a href="<?= $baseurl; ?>Inscription" class="btn btn-sm btn-outline-secondary me-3 w-25" type="button">S'inscrire</a>
       <?php
       }
       ?>
@@ -55,7 +55,7 @@
       <?php
       if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
       ?>
-        <a href="<?= addslashes($baseurl); ?>AddArticle" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Ajouter un article</a>
+        <a href="<?= $baseurl; ?>AddArticle" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Ajouter un article</a>
       <?php
       }
       ?>
@@ -79,7 +79,7 @@
       <?php
       if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
       ?>
-      <a class="m-5" href="<?= addslashes($baseurl); ?>List">Articles</a>
+      <a class="m-5" href="<?= $baseurl; ?>List">Articles</a>
       <?php
       }
       ?>
