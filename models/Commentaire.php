@@ -7,6 +7,7 @@ class Commentaire{
 	private $contenu;
 	private $dateDernierModif;
 	private $valider;
+	private $user_name;
 
 	public function __construct(array $data)
 	{	
@@ -131,6 +132,20 @@ class Commentaire{
 	public function getValider()
 	{
 		return $this->valider;
+	}
+
+
+
+	public function setUser_name($user_name)
+	{
+		if(is_string($user_name))
+		{
+			$this->user_name=$user_name;
+		}
+	}
+	public function getUser_name()
+	{
+		return $this->user_name;
 	}
 
 	

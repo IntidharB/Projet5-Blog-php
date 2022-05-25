@@ -38,13 +38,13 @@ class ControllerUser extends ControllerBase {
 				$_SESSION['user']=$user;
 				$this->redirect('Accueil');
 			}
-		}else{ echo "vérifiez vos 2 mot";}
-	}else{ $this->redirect("inscription.php?reg_err=email");}
-}else{ $this->redirect("inscription.php?reg_err=email_length");}
-}else{ $this->redirect("inscription.php?reg_err=prenom_length");}
-}else{ $this->redirect(" inscription.php?reg_err=nom_length");}
-}else{ $this->redirect("Inscription");}
-
+		}else{  $this->AddParam("error","veuillez vérifier  vos mot de passe");}
+	}else{ $this->AddParam("error","veuillez saisir un email valide");}
+}else{  $this->AddParam("error","Votre adresse_mail dépasse le nombre de caractères autorisés");}
+}else{  $this->AddParam("error","votre prénom dépasse le nombre de caractères autorisésr");}
+}else{  $this->AddParam("error","votre nom dépasse le nombre de caractères autorisés");}
+}else{ $this->AddParam("error","Adresse mail déjà utilisée par un autre utilisateur");}
+$this->view('viewInscription');
 
 	}
 	
@@ -60,31 +60,31 @@ class ControllerUser extends ControllerBase {
 		$this->userManager = new UserManager();
 		// Si il existe les champs email, password et qu'il sont pas vident
 		if(!empty($_POST['mail']) && !empty($_POST['mot_de_passe'])) 
-		{dump("teste");
+		{
 			$row=$this->userManager->ConnexionUser($_POST['mail'], $_POST['mot_de_passe']);
 			// Si > à 0 alors l'utilisateur existe
 			if($row > 0)
-			{dump("teste2");
+			{
 				$user = $this->userManager->ConnexionUser($_POST['mail'], $_POST['mot_de_passe']);
 				$this->AddParam('user',$user);
 				// Si le mail est bon niveau format
 				if(filter_var($_POST['mail'], FILTER_VALIDATE_EMAIL))
-				{dump("teste3");
+				{
 					// Si le mot de passe est le bon
 					if(password_verify($_POST['mot_de_passe'], $user['mot_de_passe']))
-					{dump("teste4");
+					{
 						// On créer la session
 						$_SESSION['user'] = $user;
 						$this->redirect('Accueil');
 						
-					}// }else{ header('Location: index.php?login_err=password');  }
+					}else{ $this->AddParam("error","Mot de passe inccorecte");  }
 				}
-				// else{ header('Location: index.php?login_err=email'); }
+				//  else{ header('Location: index.php?login_err=email'); }
 			
-			}
-			// else{ header('Location: index.php?login_err=already');  }
-		}    
-		   else{ $this->redirect("Connexion"); } // si le formulaire est envoyé sans aucune données
+			}else{ $this->AddParam("error","L’adresse e-mail que vous avez saisi(e) n’est pas associé(e) à un compte");  } //L’adresse e-mail que vous avez saisi(e) n’est pas associé(e) à un compte
+		}else{ $this->AddParam("error","Veuillez remplir tous les champs du formulaire") ; } // si le formulaire est envoyé sans aucune données $this->redirect("Connexion")
+		$this->view('viewConnexion');
+
 	}
 	
 	public function Connexion(){
@@ -95,7 +95,7 @@ class ControllerUser extends ControllerBase {
 
 	public function Deconnexion(){
 		session_destroy();
-		$this->view('viewConnexion');
+		$this->redirect("Accueil");
 	}
 }
     

@@ -66,28 +66,20 @@ footer a{
 .sup-commentaire{
 	background-color: #fff;
     	color: red;
-    	/* text-decoration: underline; */
-    	/* margin-left: 190%; */
-	/* border: none; */
-
+}
+.valider{
+	color: #178a17;
+	background-color: #fff;
+}
+.error{
+	
+	color: red;
+	font-size: 20px;
+	text-align: center;
+	margin: 4% 0% 0% 0%;
+	    
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-/******* VIEW ACCUEIL  ************/
-/******* VIEW ACCUEIL  ************/
-/******* VIEW ACCUEIL  ************/
-/******* VIEW ACCUEIL  ************/
-/******* VIEW ACCUEIL  ************/
 
 

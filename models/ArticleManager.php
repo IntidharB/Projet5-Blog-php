@@ -25,7 +25,7 @@ class ArticleManager extends Model{
 		$bdd=$this->getBdd();
 		$var=[];
 		$req=$bdd->prepare('INSERT INTO Articles(titre,chapo,contenu,auteur,dateDernierModif) VALUE(?,?,?,?,NOW())');
-		return $req->execute(array($titre,$chapo,$contenu,$auteur)); 
+		return $req->execute(array(htmlentities($titre),htmlentities($chapo),htmlentities($contenu),htmlentities($auteur))); 
 	}
 
 
@@ -35,7 +35,7 @@ class ArticleManager extends Model{
 		$bdd=$this->getBdd();
 		$var=[];
 		$req=$bdd->prepare('UPDATE Articles SET titre= :titre, chapo= :chapo, contenu= :contenu, auteur= :auteur, dateDernierModif= NOW() WHERE id = :id');
-		return $req->execute(array("id"=>$id,"titre"=>$titre,"chapo"=>$chapo,"contenu"=>$contenu,"auteur"=>$auteur)); 
+		return $req->execute(array("id"=>htmlentities($id),"titre"=>htmlentities($titre),"chapo"=>htmlentities($chapo),"contenu"=>htmlentities($contenu),"auteur"=>htmlentities($auteur))); 
 		// dump($req->errorInfo());
 		
 	}

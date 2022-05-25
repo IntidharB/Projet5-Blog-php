@@ -6,7 +6,7 @@ class ContactManager extends Model{
 		$bdd=$this->getBdd();
 		$var=[];
 		$req=$bdd->prepare('INSERT INTO Contact(nom,prenom,mail,message) VALUE(?,?,?,?)');
-		return $req->execute(array($nom,$prenom,$mail,$message)); 
+		return $req->execute(array(htmlentities($nom),htmlentities($prenom),htmlentities($mail),htmlentities($message))); 
 	}
 	
 }

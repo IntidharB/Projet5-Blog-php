@@ -5,9 +5,16 @@
     <section>
         <h1 class=" text-center">Ben mrad Intidhar</h1>
         <div class="row">
-          <p class="pt-5 col-9">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae magni minima dolorem, mollitia maiores in iure reprehenderit dolorum consequuntur distinctio, at itaque, animi aut natus iste id delectus quo fuga!
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae magni minima dolorem, mollitia maiores in iure reprehenderit dolorum consequuntur distinctio, at itaque, animi aut natus iste id delectus quo fuga!
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae magni minima dolorem, mollitia maiores in iure reprehenderit dolorum consequuntur distinctio, at itaque, animi aut natus iste id delectus quo fuga!
+          <p class="pt-5 col-9">Bonjour ! <br><br>
+            Je m'appelle Ben mrad Intidhar, et je suit actuellement en formation pour devenir développeur web PHP/Symphony avec OpenclassRooms. J'ai débuté cette formation au mois d'août 2021, et j'ai déja beaucoup appris: <br>
+
+            - J'ai commencé par ré-apprendre le language HTML 5 ainsi que le CSS 3. Une formalité obligatoire pour partir sur de bonnes bases... <br>
+            - Ensuite, j'ai commencé à manipuler le CMS Wordpress. Grâce à mes aquis, j'ai mis en place un blog qui fonctionne grâce à ce CMS. <br>
+            - J'ai par la suite continué à mettre mes compétences à l'épreuve en me séparrant d'un CMS en réalisant une cahier des charges  et en codant un prototype de site web le plus complet possible sans utiliser de PHP. J'ai utilisé le framework bootstrap pour parvenir à mes fins. <br>
+            - Je me suis ensuite penché sur les étapes qui caractérisent la gestion d'un projet : diagrammes UML, gestions d'une base de donnée SQL, etc... <br>
+            - Me voici finalement ici, sur ce blog que j'ai appris à réaliser entièrement en PHP orienté objet. <br>
+
+            Et ce n'est pas terminé ! Ma formation continue et j'ai encore beaucoup de choses à apprendre.
           </p>
           <img src="media/Accueil-img2.jpg" class="img2 col-3 img-fluid float-end"  alt="">
         </div>

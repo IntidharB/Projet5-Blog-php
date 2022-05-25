@@ -1,38 +1,10 @@
-<?php 
-                if(isset($_GET['login_err']))
-                {
-                    $err = htmlspecialchars($_GET['login_err']);
-
-                    switch($err)
-                    {
-                        case 'mot_de_passe':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> mot de passe incorrect
-                            </div>
-                        <?php
-                        break;
-
-                        case 'mail':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> email incorrect
-                            </div>
-                        <?php
-                        break;
-
-                        case 'already':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> compte non existant
-                            </div>
-                        <?php
-                        break;
-                    }
-                }
-?> 
 <section>
         <h2 class=" text-center">Connexion</h2>
+        <div class="error">
+        <?=
+        !empty($error)?$error:"";//if en seul ligne
+        ?>
+        </div>
             <form method="POST" action="Connect" class="p-5">
                 
 

@@ -7,7 +7,7 @@ function dump($data){
 	var_dump($data);
 	echo'</pre>';	
 }
-
+session_start();
 $router = new Router();
 $router->routeReq();
 ?>

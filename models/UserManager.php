@@ -16,7 +16,7 @@ class UserManager extends Model{
 											
 		//On insère dans la base de données
 		$insert = $bdd->prepare('INSERT INTO User(nom,prenom, mail, mot_de_passe) VALUES(?,?,?,?)');
-		$insert->execute(array($nom,$prenom,$mail,$mot_de_passe));
+		$insert->execute(array(htmlentities($nom),htmlentities($prenom),htmlentities($mail),htmlentities($mot_de_passe)));
 		return $insert->rowCount();
 		
 		
@@ -28,7 +28,7 @@ class UserManager extends Model{
 		$bdd=$this->getBdd();
 			
 			// On vérifie si l'utilisateur existe
-			$check = $bdd->prepare('SELECT nom,prenom, mail, mot_de_passe FROM User WHERE mail = ?');
+			$check = $bdd->prepare('SELECT id,nom,prenom, mail, mot_de_passe FROM User WHERE mail = ?');
 			$check->execute(array($mail));
 
 			return  $check->rowCount();
@@ -41,7 +41,7 @@ class UserManager extends Model{
 	{
 		// On regarde si l'utilisateur est inscrit dans la table utilisateurs
 		$bdd=$this->getBdd();
-		$check = $bdd->prepare('SELECT id,nom,prenom, mail,mot_de_passe FROM User WHERE mail = ?');
+		$check = $bdd->prepare('SELECT id,nom,prenom, mail,mot_de_passe,admin FROM User WHERE mail = ?');
 		$check->execute(array($mail));
 		$data = $check->fetch();
 		$row = $check->rowCount();

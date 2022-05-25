@@ -1,7 +1,8 @@
 [{
 	"url":"/Accueil",
 	"controller":"Accueil",
-	"action":"Accueil"
+	"action":"Accueil",
+	"connected":false
 	
 	}
 ,
@@ -15,7 +16,8 @@
 {
 	"url":"/List",
 	"controller":"Article",
-	"action":"ListArticles"
+	"action":"ListArticles",
+	"connected":true
 	}
 ,
 
@@ -24,24 +26,29 @@
 	"controller":"Article",
 	"action":"Article",
 	"param":["idArticle"]
+	,
+	"connected":true
 	}
 ,
 {
 	"url":"/Add",
 	"controller":"Article",
-	"action":"Add"
+	"action":"Add",
+	"connected":true
 	}
 ,
 {
 	"url":"/AddArticle",
 	"controller":"Article",
-	"action":"AddArticle"
+	"action":"AddArticle",
+	"connected":true
 	}
 ,
 {
 	"url":"/Article/Edit",
 	"controller":"Article",
-	"action":"Edit"
+	"action":"Edit",
+	"connected":true
 	}
 ,
 
@@ -64,7 +71,8 @@
 	"url":"/Article/DeleteArticle/([0-9]+)",
 	"controller":"Article",
 	"action":"DeleteArticle",
-	"param":["idArticle"]
+	"param":["idArticle"],
+	"connected":true
 	}
 ,
 
@@ -77,7 +85,8 @@
 	{
 	"url":"/ListCommentaires",
 	"controller":"Commentaire",
-	"action":"ListCommentaires"
+	"action":"ListCommentaires",
+	"connected":true
 	}
 ,
 
@@ -85,15 +94,26 @@
 {
 	"url":"/Article/AddCommentaire",
 	"controller":"Commentaire",
-	"action":"AddComment"
+	"action":"AddComment",
+	"connected":true
 		}
 ,
 {
-	"url":"/Article/DeleteCommentaire",
+	"url":"/Article/DeleteCommentaire/([0-9]+)",
 	"controller":"Commentaire",
-	"action":"DeleteComment"
+	"action":"DeleteComment",
+	"param":["idCommentaire"],
+	"connected":true
 		}
-,	
+,
+{
+	"url":"/Article/ValidCommentaire/([0-9]+)",
+	"controller":"Commentaire",
+	"action":"ValideComment",
+	"param":["idCommentaire"],
+	"connected":true
+		}
+,
 	
 
 
@@ -105,7 +125,8 @@
 {
 	"url":"/EnvoyerMsg",
 	"controller":"Contact",
-	"action":"Envoyer"
+	"action":"Envoyer",
+	"connected":true
 	}
 
 
@@ -117,35 +138,40 @@
 {
 	"url":"/Connexion",
 	"controller":"User",
-	"action":"Connexion"
+	"action":"Connexion",
+	"connected":false
 	}
 ,
 
 {
 	"url":"/Connect",
 	"controller":"User",
-	"action":"Connect"
+	"action":"Connect",
+	"connected":false
 	}
 ,
 
 {
 	"url":"/Inscription",
 	"controller":"User",
-	"action":"Inscription"
+	"action":"Inscription",
+	"connected":false
 	}
 ,
 
 {
 	"url":"/Inscrit",
 	"controller":"User",
-	"action":"Inscrit"
+	"action":"Inscrit",
+	"connected":false
 	}
 ,
 
 {
 	"url":"/Deconnexion",
 	"controller":"User",
-	"action":"Deconnexion"
+	"action":"Deconnexion",
+	"connected":true
 	}
 
 
