@@ -11,4 +11,4 @@ creer une base  projet5-blog
 executer le script projet5-blog.sql
 
 ## Configuration du projet
-modifer le fichier config.json avec l'url de base du serveur
+modifer le fichier config.json avec l'url dee base du serveur
