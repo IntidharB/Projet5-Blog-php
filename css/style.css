@@ -3,30 +3,37 @@
 * {
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
 }
-p,a,label{
+
+p,
+a,
+label {
 	font-size: 20px;
 }
 
-h1{
-	color: #7BC8C8;
+h1 {
+	color: #7bc8c8;
 	font-size: 40px;
 }
-h2{
-	color:#D5849A;
+
+h2 {
+	color: #D5849A;
 	font-size: 35px;
-	
+
 }
+
 /* les bouttons  */
-.btn{
-	background-color: #7BC8C8;
+.btn {
+	background-color: #7bc8c8;
 	padding: 1% 3% 1% 3%;
 }
+
 /* Footer */
-footer{
+footer {
 	background-color: rgb(238, 234, 234);
-	
+
 }
-footer a{
+
+footer a {
 	font-weight: 500;
 }
 
@@ -34,52 +41,54 @@ footer a{
 
 /******* VIEW ACCUEIL  ************/
 /* grande image  */
-.img1{
-	height:700px;
+.img1 {
+	height: 700px;
 }
+
 /* img de la section  */
-.img2{
+.img2 {
 	height: 500px;
 	width: 300px;
 }
 
 /******* VIEW ARTICLE  ************/
 
-.retour{
-	color:#4545ec;
+.retour {
+	color: #4545ec;
 	background-color: #fff;
-    	/* text-decoration: underline; */
+	/* text-decoration: underline; */
 
 }
-.sup-article{
-	color:#e32c2c;
+
+.sup-article {
+	color: #e32c2c;
 	background-color: #fff;
-    	/* text-decoration: underline; */
-	
+	/* text-decoration: underline; */
+
 }
-.modif-article{
-	color:#056305;
+
+.modif-article {
+	color: #056305;
 	background-color: #fff;
-    	/* text-decoration: underline; */
-	
+	/* text-decoration: underline; */
+
 }
-.sup-commentaire{
+
+.sup-commentaire {
 	background-color: #fff;
-    	color: red;
+	color: red;
 }
-.valider{
+
+.valider {
 	color: #178a17;
 	background-color: #fff;
 }
-.error{
-	
+
+.error {
+
 	color: red;
 	font-size: 20px;
 	text-align: center;
 	margin: 4% 0% 0% 0%;
-	    
+
 }
-
-
-
-
