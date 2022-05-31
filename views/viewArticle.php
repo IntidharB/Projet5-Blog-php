@@ -6,7 +6,7 @@
 			<p><?= $article->getContenu(); ?></p>
 			<p>Ecrit par <?= $article->getAuteur(); ?>, Modifié le <?= $article->getDateDernierModif(); ?></p>
 			<a class="btn btn-primary retour" href="<?=$baseurl; ?>List">Retour</a>
-			<?php if (!empty($_SESSION["user"]) && ($_SESSION["user"]['admin'] == 1)) { ?>
+			<?php if (!empty($user) && ($user['admin'] == 1)) { ?>
 				<?= "<a class='btn btn-success modif-article' href='EditArticle/" . $article->getId() . "'>Modifier</a>"; ?>
 				<?= "<a class='btn btn-danger sup-article' href='DeleteArticle/" . $article->getId() . "'>Supprimer</a>"; ?>
 			<?php
@@ -25,7 +25,7 @@
 
 
 	<!-- Add commentaire -->
-	<?php if (!empty($_SESSION["user"])) {
+	<?php if (!empty($user)) {
 
 	?>
 		<div class="row">
@@ -55,7 +55,7 @@
 	<h2 class="text-center m-2">les commentaires</h2>
 	<?php foreach ($commentaires as $commentaire) { ?>
 
-		<?php if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1) || $commentaire->getValider() == 1) {
+		<?php if ((!empty($user) && $user["admin"] == 1) || $commentaire->getValider() == 1) {
 
 		?>
 			<div class='card-group col-lg-10 col-md-10 mx-auto'>
@@ -68,13 +68,13 @@
 					<h4> Ajouté le <?= $commentaire->getDateDernierModif(); ?>.</h4>
 
 
-					<?php if (($_SESSION["user"]["id"] == $commentaire->getId_user()) || ($_SESSION["user"]["admin"] == 1)) {
+					<?php if (($user["id"] == $commentaire->getId_user()) || ($user["admin"] == 1)) {
 					?>
 					<?= "<a class='btn btn-danger sup-commentaire' href='DeleteCommentaire/" . $commentaire->getId() . "\'>Supprimer</a>"; ?>
 					<?php } ?>
 
 
-					<?php if (($_SESSION["user"]["admin"] == 1) && $commentaire->getValider() == 0) {
+					<?php if (($user["admin"] == 1) && $commentaire->getValider() == 0) {
 					?>
 						<?= "<a class='btn btn-success valider' href='ValidCommentaire/" . $commentaire->getId() . "'>Valider</a>"; ?>
 					<?php } ?>

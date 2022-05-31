@@ -34,7 +34,7 @@ class Router
 			} else {
 				$route = array_shift($result);
 				//On peut pas naviguer dans les pages via l'url si on est pas connectée
-				if ($route->connected == false || !empty($_SESSION["user"])) {
+				if ($route->connected == false || !empty($this->user)) {
 
 					$param = $this->getParam($route, $url);
 					$controllerClass = "Controller" . $route->controller;

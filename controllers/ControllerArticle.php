@@ -36,7 +36,7 @@ class ControllerArticle extends ControllerBase
 	// Ajouter un article
 	public function Add()
 	{
-		if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
+		if ((!empty($this->user) && $this->user["admin"] == 1)) {
 			$this->articleManager = new ArticleManager();
 
 			if (!empty($_POST['titre']) && !empty($_POST['chapo']) && !empty($_POST['contenu']) && !empty($_POST['auteur'])) {
@@ -51,7 +51,7 @@ class ControllerArticle extends ControllerBase
 
 	public function AddArticle()
 	{
-		if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
+		if ((!empty($this->user) && $this->user["admin"] == 1)) {
 			$this->view('viewAdd');
 		}else {$this->redirect("Accueil");}
 	}
@@ -78,7 +78,7 @@ class ControllerArticle extends ControllerBase
 
 		$article = $this->articleManager->getArticle($id);
 		$this->AddParam('article', $article);
-		if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
+		if ((!empty($this->user) && $this->user["admin"] == 1)) {
 			$this->view('viewEdit');
 		}else {$this->redirect("List");}//Article/EditArticle/13
 	}
@@ -102,7 +102,7 @@ class ControllerArticle extends ControllerBase
 
 		$article = $this->articleManager->getArticle($id);
 		$this->AddParam('article', $article);
-		if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
+		if ((!empty($this->user) && $this->user["admin"] == 1)) {
 			$this->view('viewDelete');
 		} else {$this->redirect("List");}// $this->view('viewDelete');
 	}

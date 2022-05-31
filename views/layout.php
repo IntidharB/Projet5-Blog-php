@@ -25,7 +25,7 @@
               <a class="nav-link active" aria-current="page" href="<?= addslashes($baseurl); ?>Accueil">Accueil</a>
             </li>
             <?php
-            if (!empty($_SESSION['user'])) {
+            if (!empty($user)) {
             ?>
               <li class="nav-item">
                 <a class="nav-link" href="<?= addslashes($baseurl); ?>List">Articles</a>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <?php
-      if (!empty($_SESSION['user'])) {
+      if (!empty($user)) {
       ?>
         <a href="<?=htmlspecialchars($baseurl); ?>Deconnexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se déconneceter</a>
       <?php
@@ -53,7 +53,7 @@
       ?>
 
       <?php
-      if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
+      if ((!empty($user)&& ($user)["admin"] == 1)) {
       ?>
         <a href="<?= htmlspecialchars($baseurl); ?>AddArticle" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Ajouter un article</a>
       <?php
@@ -77,7 +77,7 @@
 
       <a class="m-5" href="https://github.com/IntidharB/Projet5-Blog-php">GitHub</a>
       <?php
-      if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
+      if ((!empty($user) && $user["admin"] == 1)) {
       ?>
       <a class="m-5" href="<?= htmlspecialchars($baseurl); ?>List">Articles</a>
       <?php
