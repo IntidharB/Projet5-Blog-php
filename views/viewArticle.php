@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-lg-10 col-md-10 mx-auto">
-			<h2><?= $article->getTitre(); ?></h2>
+			<h2><?= htmlentities($article->getTitre()); ?></h2>
 			<p><strong><?= $article->getChapo(); ?></strong></p>
 			<p><?= $article->getContenu(); ?></p>
 			<p>Ecrit par <?= $article->getAuteur(); ?>, Modifié le <?= $article->getDateDernierModif(); ?></p>

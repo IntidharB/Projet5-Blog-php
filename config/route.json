@@ -56,13 +56,15 @@
 	"url":"/Article/EditArticle/([0-9]+)",
 	"controller":"Article",
 	"action":"EditArticle",
-	"param":["idArticle"]
+	"param":["idArticle"],
+	"connected":true
 	}
 ,
 {
 	"url":"/Article/Delete",
 	"controller":"Article",
-	"action":"Delete"
+	"action":"Delete",
+	"connected":true
 	}
 ,
 
