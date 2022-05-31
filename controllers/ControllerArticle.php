@@ -39,8 +39,8 @@ class ControllerArticle extends ControllerBase
 		if ((!empty($this->user) && $this->user["admin"] == 1)) {
 			$this->articleManager = new ArticleManager();
 
-			if (!empty($_POST['titre']) && !empty($_POST['chapo']) && !empty($_POST['contenu']) && !empty($_POST['auteur'])) {
-				$article = $this->articleManager->AddArticle($_POST['titre'], $_POST['chapo'], $_POST['contenu'], $_POST['auteur']);
+			if ($this->Post->get('titre')!=null && $this->Post->get('chapo')!=null  && $this->Post->get('contenu')!=null && $this->Post->get('auteur')!=null){
+				$article = $this->articleManager->AddArticle($this->Post->get('titre'), $this->Post->get('chapo'),$this->Post->get('contenu'), $this->Post->get('auteur'));
 				$this->AddParam('articles', $article);
 				$this->redirect("AddArticle");
 			}
@@ -64,9 +64,9 @@ class ControllerArticle extends ControllerBase
 	{
 
 		$this->articleManager = new ArticleManager();
-		if (!empty($_POST['id']) && !empty($_POST['titre']) && !empty($_POST['chapo']) && !empty($_POST['contenu']) && !empty($_POST['auteur'])) {
+		if ($this->Post->get('id')!=null && $this->Post->get('titre')!=null && $this->Post->get('chapo')!=null && $this->Post->get('contenu')!=null && $this->Post->get('auteur')!=null) {
 
-			$this->articleManager->EditArticle($_POST['id'], $_POST['titre'], $_POST['chapo'], $_POST['contenu'], $_POST['auteur']);
+			$this->articleManager->EditArticle($this->Post->get('id'),$this->Post->get('titre'), $this->Post->get('chapo'), $this->Post->get('contenu'), $this->Post->get('auteur'));
 			$this->redirect("List");
 		}
 	}
@@ -88,9 +88,9 @@ class ControllerArticle extends ControllerBase
 	public function Delete()
 	{
 		//vérifier l'exitance de l'id
-		if (!empty($_POST['id'])) {
+		if ($this->Post->get('id')!=null) {
 			$this->articleManager = new ArticleManager();
-			$this->articleManager->deleteArticle($_POST['id']);
+			$this->articleManager->deleteArticle($this->Post->get('id'));
 			$this->redirect("List");
 		}
 	}
