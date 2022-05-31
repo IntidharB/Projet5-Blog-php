@@ -171,7 +171,7 @@
 	"url":"/Deconnexion",
 	"controller":"User",
 	"action":"Deconnexion",
-	"connected":true
+	"connected":false
 	}
 
 

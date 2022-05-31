@@ -70,7 +70,7 @@
 
 					<?php if (($user["id"] == $commentaire->getId_user()) || ($user["admin"] == 1)) {
 					?>
-					<?= "<a class='btn btn-danger sup-commentaire' href='DeleteCommentaire/" . $commentaire->getId() . "\'>Supprimer</a>"; ?>
+					<?= "<a class='btn btn-danger sup-commentaire' href='DeleteCommentaire/" . $commentaire->getId() . "'>Supprimer</a>"; ?>
 					<?php } ?>
 
 

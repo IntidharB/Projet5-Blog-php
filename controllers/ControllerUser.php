@@ -75,6 +75,7 @@ $this->view('viewInscription');
 					{
 						// On créer la session
 						$this->Session->set('user',$user);
+						
 						$this->redirect('Accueil');
 						
 					}else{ $this->AddParam("error","Mot de passe inccorecte");  }
@@ -94,7 +95,8 @@ $this->view('viewInscription');
 
 
 	public function Deconnexion(){
-		session_destroy();
+		$this->Session->deconnexion();
+		// dump($this->Session);
 		$this->redirect("Accueil");
 	}
 }

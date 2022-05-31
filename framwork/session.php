@@ -12,6 +12,11 @@ class Session{
   }
   public function set($name,$value){
 	$this->Session[$name]=$value;
+	$_SESSION[$name]=$value;
+  }
+  public function deconnexion(){
+	 unset( $this->Session['user']);
+	 session_destroy();
   }
 }
 ?>

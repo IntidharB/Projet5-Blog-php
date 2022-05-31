@@ -7,7 +7,7 @@
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!--CSS-->
-  <link rel="stylesheet" href="<?= addslashes($baseurl) ?>css/style.css">
+  <link rel="stylesheet" href="<?=$baseurl?>css/style.css">
 </head>
 
 <body>
@@ -39,6 +39,7 @@
         </div>
       </div>
       <?php
+      
       if (!empty($user)) {
       ?>
         <a href="<?=htmlspecialchars($baseurl); ?>Deconnexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se déconneceter</a>
