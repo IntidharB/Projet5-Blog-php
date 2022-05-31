@@ -2,15 +2,11 @@
 
 html{font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';}
 
-p,
-a,
-label {
-	font-size: 20px;
+p,a,label {font-size: 20px;
 }
 
-h1 {
-	color: #7bc8c8;
-	font-size: 40px;
+h1 {color: #7bc8c8;
+font-size: 40px;
 }
 
 h2 {
