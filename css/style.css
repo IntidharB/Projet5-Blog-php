@@ -1,16 +1,17 @@
-*{font-family: Cambria, Cochin, Georgia, Times, Times ;}
-p,a,label {font-size: 20px;
-}
+* {
+	font-family:'Times New Roman', Times, serif}
+p,a,label {
+	font-size: 20px;}
 
-h1{color: #7bc8c8;font-size: 40px;
-}
+h1 {
+	color: #7bc8c8;font-size: 40px;}
 
-h2{color: #D5849A;
-font-size: 35px;
-}
-.btn{background-color: #7bc8c8;
-padding: 1% 3% 1% 3%;
-}
+h2 {
+	color: #D5849A;
+	font-size: 35px;}
+.btn {
+	background-color: #7bc8c8;
+	padding: 1% 3% 1% 3%;}
 
 
 footer {
