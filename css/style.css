@@ -1,7 +1,8 @@
-* {
-	font-family:'Times New Roman', Times, serif}
-p,a,label {
-	font-size: 20px;}
+* { font-family:'Times New Roman',Times,serif
+}
+p,
+a,
+label { font-size: 20px;}
 
 h1 {
 	color: #7bc8c8;font-size: 40px;}
