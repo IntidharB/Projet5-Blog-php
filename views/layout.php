@@ -41,13 +41,13 @@
       <?php
       if (!empty($_SESSION['user'])) {
       ?>
-        <a href="<?= addslashes($baseurl); ?>Deconnexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se déconneceter</a>
+        <a href="<?=htmlspecialchars($baseurl); ?>Deconnexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se déconneceter</a>
       <?php
       } else {
       ?>
 
-        <a href="<?= addslashes($baseurl); ?>Connexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se conneceter</a>
-        <a href="<?= addslashes($baseurl); ?>Inscription" class="btn btn-sm btn-outline-secondary me-3 w-25" type="button">S'inscrire</a>
+        <a href="<?= htmlspecialchars($baseurl); ?>Connexion" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Se conneceter</a>
+        <a href="<?= htmlspecialchars($baseurl); ?>Inscription" class="btn btn-sm btn-outline-secondary me-3 w-25" type="button">S'inscrire</a>
       <?php
       }
       ?>
@@ -55,7 +55,7 @@
       <?php
       if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
       ?>
-        <a href="<?= addslashes($baseurl); ?>AddArticle" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Ajouter un article</a>
+        <a href="<?= htmlspecialchars($baseurl); ?>AddArticle" class="btn btn-sm btn-outline-secondary me-2 w-25" type="button">Ajouter un article</a>
       <?php
       }
       ?>
@@ -79,7 +79,7 @@
       <?php
       if ((!empty($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1)) {
       ?>
-      <a class="m-5" href="<?= addslashes($baseurl); ?>List">Articles</a>
+      <a class="m-5" href="<?= htmlspecialchars($baseurl); ?>List">Articles</a>
       <?php
       }
       ?>

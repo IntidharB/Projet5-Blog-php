@@ -126,7 +126,7 @@
 	"url":"/EnvoyerMsg",
 	"controller":"Contact",
 	"action":"Envoyer",
-	"connected":true
+	"connected":false
 	}
 
 
