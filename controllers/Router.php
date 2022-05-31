@@ -15,7 +15,12 @@ class Router
 		try {
 			//cette fnct permettre de charger automatiquement les classes
 			spl_autoload_register(function ($class) {
+				if(file_exists('models/' . $class . '.php')){
 				require_once('models/' . $class . '.php');
+			}
+			if(file_exists('framwork/' . $class . '.php')){
+				require_once('framwork/' . $class . '.php');
+			}
 			});
 
 			$url = '';

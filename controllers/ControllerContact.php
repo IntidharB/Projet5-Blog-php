@@ -10,9 +10,9 @@ class ControllerContact extends ControllerBase
 	public function Envoyer()
 	{
 		$this->contactManager = new ContactManager();
-		if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['mail']) && !empty($_POST['message'])) {
+		if ($this->Post->get('nom')!=null && $this->Post->get('prenom')!=null && $this->Post->get('mail')!=null && $this->Post->get('message')!=null) {
 
-			$contactes = $this->contactManager->Envoyer($_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['message']);
+			$contactes = $this->contactManager->Envoyer($this->Post->get('nom'), $this->Post->get('prenom'),$this->Post->get('mail'),$this->Post->get('message'));
 			$this->AddParam('contactes', $contactes);
 			// require_once("views/viewContact.php");
 			$this->view('viewContact');

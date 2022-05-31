@@ -9,8 +9,11 @@ class ControllerBase
 		$this->params = [];
 		$this->config = json_decode(file_get_contents("config/config.json"));
 		$this->params["baseurl"] = $this->config->baseurl;
-		if(!empty($_SESSION['user'])){
-			$this->user=$_SESSION['user'];
+		$this->Session=new Session();
+		$this->Post=new Post();
+		
+		if($this->Session->get('user')!= null){
+			$this->user=$this->Session->get('user');
 			$this->AddParam('user',$this->user);
 		}
 		

@@ -23,11 +23,11 @@ class ControllerCommentaire extends ControllerBase{
 	public function AddComment(){
 	
 		$this->commentaireManager= new CommentaireManager();
-		if (!empty($_POST['contenu']) &&!empty($_POST['id_article'])) {
+		if ($this->Post->get('contenu')!=null && $this->Post->get('id_article')!=null) {
 
-		$commentaire=$this->commentaireManager->AddCommentaire($_POST['contenu'],$_SESSION['user']["id"],$_POST["id_article"]);
+		$commentaire=$this->commentaireManager->AddCommentaire($this->Post->get('contenu'),$this->user["id"],$_POST["id_article"]);
 		$this->AddParam('commentaires',$commentaire);
-		$this->redirect("Article/".$_POST['id_article']);
+		$this->redirect("Article/".$this->Post->get('id_article'));
 		
 		
 	}}
