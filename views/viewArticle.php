@@ -5,7 +5,7 @@
 			<p><strong><?= $article->getChapo(); ?></strong></p>
 			<p><?= $article->getContenu(); ?></p>
 			<p>Ecrit par <?= $article->getAuteur(); ?>, Modifié le <?= $article->getDateDernierModif(); ?></p>
-			<a class="btn btn-primary retour" href="<?=$baseurl; ?>List">Retour</a>
+			<a class="btn btn-primary retour" href="<?=htmlspecialchars($baseurl); ?>List">Retour</a>
 			<?php if (!empty($user) && ($user['admin'] == 1)) { ?>
 				<?= "<a class='btn btn-success modif-article' href='EditArticle/" . $article->getId() . "'>Modifier</a>"; ?>
 				<?= "<a class='btn btn-danger sup-article' href='DeleteArticle/" . $article->getId() . "'>Supprimer</a>"; ?>
