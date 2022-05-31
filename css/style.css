@@ -28,18 +28,18 @@ footer a {
 	width: 300px;}
 .retour {/******* VIEW ARTICLE  ************/
 	color: #4545ec;
-	background-color: #fff;
-	/* text-decoration: underline; */
+		background-color: #fff;
+	
 
 }
 
 .sup-article {
 	color: #e32c2c;
-	background-color: #fff;}
+		background-color: #fff;}
 
 .modif-article {
 	color: #056305;
-	background-color: #fff;}
+		background-color: #fff;}
 
 .sup-commentaire {
 	background-color: #fff;
@@ -47,10 +47,10 @@ footer a {
 
 .valider {
 	color: #178a17;
-	background-color: #fff;}
+		background-color: #fff;}
 
 .error {
 	color: red;
-	font-size: 20px;
-	text-align: center;
-	margin: 4% 0% 0% 0%;}
+		font-size: 20px;
+		text-align: center;
+		margin: 4% 0% 0% 0%;}
