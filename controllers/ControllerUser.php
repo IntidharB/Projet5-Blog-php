@@ -35,8 +35,8 @@ class ControllerUser extends ControllerBase {
 			$result= $this->userManager->InscriptionUser($this->Post->get('nom'),$this->Post->get('prenom'),$this->Post->get('mail'),$this->Post->get('mot_de_passe'),$this->Post->get('mot_de_passe_2'));
 			if($result==1){
 				$user=$this->userManager->checkUser($this->Post->get('mail'));
-				$this->Session->set('user',$user);
-				$this->redirect('Accueil');
+				// $this->Session->set('user',$user);
+				$this->redirect('Connexion');
 			}
 		}else{  $this->AddParam("error","veuillez vérifier  vos mot de passe");}
 	}else{ $this->AddParam("error","veuillez saisir un email valide");}
